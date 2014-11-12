@@ -1,0 +1,50 @@
+set background=dark
+colorscheme evening
+
+if has("gui_running")
+    set guifont=Monospace\ 11
+    colorscheme morning
+    syntax on
+endif
+
+
+
+map <F6> :sp 
+map <F7> :MBEbp<CR>
+map <F8> :MBEbn<CR>
+
+
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set autoindent
+set cindent
+set nu
+set hlsearch
+
+
+
+map <C-j>  <C-w>j
+map <C-k>  <C-w>k
+map <C-h>  <C-w>h
+map <C-l>  <C-w>l
+
+map <F3> :TlistToggle<CR>
+
+let g:NERDTreeWinPos="right"
+map <F4> :NERDTreeToggle<CR>
+
+set backspace=2
+set backspace=indent,eol,start
+fixdel
+
+if $diff
+    " diff mode
+    set diffopt+=iwhite
+endif
+
+filetype plugin on
+set grepprg=grep\ -nH\ $*
+filetype indent on
+let g:tex_flavor='latex'
+
